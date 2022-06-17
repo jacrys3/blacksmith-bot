@@ -90,7 +90,6 @@ module.exports = {
         person1 = parseInt(Math.random() * people.length);
         person2 = parseInt(Math.random() * people.length);
         teamNum = parseInt(Math.random() * teams.length);
-        //console.log('chance: ' + chance + ', p1: ' + person1 + ', p2: ' + person2 + ', team: ' + teamNum);
         if(person2 == person1)
         {
             if(person2 == people.length - 1) person2--;
