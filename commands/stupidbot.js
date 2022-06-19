@@ -17,6 +17,7 @@ people = [
     'Rose',
     'Laura',
     'Lux',
+    'Monke',
 ];
 text1 = [
     ['', ' hits those on LAN'], 
