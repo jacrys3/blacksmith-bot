@@ -10,9 +10,9 @@ const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
-const mySecret = process.env['TOKEN']
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
 
@@ -48,4 +48,4 @@ client.on('message', message =>{
 keepOn()
 
 // last line always
-client.login(mySecret);
+client.login(process.env['TOKEN']).catch(console.error)

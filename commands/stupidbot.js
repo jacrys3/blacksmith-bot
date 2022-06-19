@@ -15,6 +15,8 @@ people = [
     'Negative',
     'Kilowatt',
     'Rose',
+    'Laura',
+    'Lux',
 ];
 text1 = [
     ['', ' hits those on LAN'], 
@@ -56,6 +58,12 @@ text1 = [
     ['', ' will win grand finals mvp'],
     ['', ' loves balls'],
     ['the funniest person in this server has to be ', ' without a doubt'],
+    ['', ' wants doomfist to fist them'],
+    ['new KarQ video! 1 throwing tip for every hero featuring ', '!'],
+    ['', ' needs to stop feeding :('],
+    ['', " just got ratio'd"],
+    ['', ' needs to get their crap together'],
+    //['', ''],
     //['', ''],
     //['', ''],
 ];
@@ -64,6 +72,8 @@ text2 = [
     ['no way people think ', ' is good. ', ' has been better for years now'],
     ['', ' vs ', ' i call that a mid off'],
     ['', ' needs to give ', ' a kiss RIGHT NOW!!'],
+    ['', ' and ', ' need to get married already'],
+    ['', ' just got ', ' with the chicken butt joke'],
     //['', '', ''],
 ];
 text3 = [
