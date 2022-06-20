@@ -5,6 +5,7 @@ const { Client, Intents } = require('discord.js');
 const client = new Discord.Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 const prefix = '$';
+var seeCommand = true;
 
 const fs = require('fs');
 
@@ -29,18 +30,35 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
 
-    if(command === 'twitch'){
+    
+    if(command === 'twitch' && seeCommand){
+        seeCommand = false;
         client.commands.get('twitch').execute(message, args);
-    } else if(command == 'youtube'){
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if(command == 'youtube' && seeCommand){
+        seeCommand = false;
         client.commands.get('youtube').execute(message, args);
-    } else if(command == 'bingus'){
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if(command == 'bingus' && seeCommand){
+        seeCommand = false;
         client.commands.get('bingus').execute(message, args);
-    } else if(command == 'help'){
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if(command == 'help' && seeCommand){
+        seeCommand = false;
         client.commands.get('help').execute(message, args);
-    } else if(command == 'stupid'){
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if(command == 'stupid' && seeCommand){
+        seeCommand = false;
         client.commands.get('stupidbot').execute(message, args);
-    } else{
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if(command == 'real' && seeCommand){
+        seeCommand = false;
+        client.commands.get('real').execute(message, args);
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if (seeCommand) {
+        seeCommand = false;
         message.channel.send('huh?');
+        setTimeout(() => { seeCommand = true }, 2500);
     }
 });
 

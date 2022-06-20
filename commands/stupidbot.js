@@ -64,8 +64,8 @@ text1 = [
     ['', ' needs to stop feeding :('],
     ['', " just got ratio'd"],
     ['', ' needs to get their crap together'],
-    //['', ''],
-    //['', ''],
+    ['ONJ (on j', ')'],
+    ['', ' for mod'],
     //['', ''],
 ];
 text2 = [
