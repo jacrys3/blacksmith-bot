@@ -82,6 +82,7 @@ text3 = [
     ['when i become owner, i will remove ', ' from the league'],
     ['', ' fans, mental health check?'],
     ['', ' will win grand finals'],
+    ['shes a ten but a ', ' fan'],
     //['', ''],
 ];
 teams = [
