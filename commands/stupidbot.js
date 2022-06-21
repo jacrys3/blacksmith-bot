@@ -1,23 +1,23 @@
 
 people = [
-    'Jacrys3',
-    'Shadow',
-    'Nerfian',
-    'Skyy',
-    'VotedBubble',
-    'Dob',
-    'Jvsh',
-    'Moots',
-    'Juno',
-    'Ablazed',
-    'Manzana',
-    'Beach',
-    'Negative',
-    'Kilowatt',
-    'Rose',
-    'Laura',
-    'Lux',
-    'Monke',
+    'jacrys3',
+    'shadow',
+    'nerfian',
+    'skyy',
+    'votedBubble',
+    'dob',
+    'jvsh',
+    'moots',
+    'juno',
+    'ablazed',
+    'manzana',
+    'beach',
+    'negative',
+    'kilowatt',
+    'rose',
+    'laura',
+    'lux',
+    'monke',
 ];
 text1 = [
     ['', ' hits those on LAN'], 
@@ -66,6 +66,10 @@ text1 = [
     ['', ' needs to get their crap together'],
     ['ONJ (on j', ')'],
     ['', ' for mod'],
+    ['i personally think that ', ' should try to win this game'],
+    ['', ' gets no bitches'],
+    ['', ' gets all the bitches'],
+    //['', ''],
     //['', ''],
 ];
 text2 = [
@@ -92,14 +96,24 @@ teams = [
     'Schizo Stack',
 ];
 
+customName = '';
+
 module.exports = {
     name: 'stupidbot',
     description: "says stupid things about stupid people :D",
     
     execute(message, args){
+        if(message.content.substring(8) != '')
+        {
+            person1 = getIndex(message.content.substring(8).toLowerCase());
+            if(person1 == -1) {
+                person1 = parseInt(Math.random() * people.length);
+            }
+        } else {
+            person1 = parseInt(Math.random() * people.length);
+        }
         total = text1.length + text2.length + text3.length;
         chance = parseInt(Math.random() * total);
-        person1 = parseInt(Math.random() * people.length);
         person2 = parseInt(Math.random() * people.length);
         teamNum = parseInt(Math.random() * teams.length);
         if(person2 == person1)
@@ -123,7 +137,6 @@ module.exports = {
     }
 }
 
-
 function createMessage1(text, person) {
     message = text[0] + person + text[1];
     return message;
@@ -137,4 +150,8 @@ function createMessage2(text, person1, person2) {
 function createMessage3(text, team) {
     message = text[0] + team + text[1];
     return message;
+}
+
+function getIndex(name) {
+    return people.indexOf(name)
 }

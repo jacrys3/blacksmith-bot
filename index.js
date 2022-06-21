@@ -47,7 +47,7 @@ client.on('message', message =>{
         seeCommand = false;
         client.commands.get('help').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command == 'stupid' && seeCommand){
+    } else if(command.substring(0,6) == 'stupid' && seeCommand){
         seeCommand = false;
         client.commands.get('stupidbot').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
