@@ -1,10 +1,9 @@
-
 people = [
     'jacrys3',
     'shadow',
     'nerfian',
     'skyy',
-    'votedBubble',
+    'votedbubble',
     'dob',
     'jvsh',
     'moots',
@@ -18,6 +17,8 @@ people = [
     'laura',
     'lux',
     'monke',
+    'vapo',
+    'eon',
 ];
 text1 = [
     ['', ' hits those on LAN'], 
@@ -69,7 +70,7 @@ text1 = [
     ['i personally think that ', ' should try to win this game'],
     ['', ' gets no bitches'],
     ['', ' gets all the bitches'],
-    //['', ''],
+    ['no ', ' no win'],
     //['', ''],
 ];
 text2 = [
@@ -79,6 +80,7 @@ text2 = [
     ['', ' needs to give ', ' a kiss RIGHT NOW!!'],
     ['', ' and ', ' need to get married already'],
     ['', ' just got ', ' with the chicken butt joke'],
+    ["look, all i'm saying is that i've never seen ", ' and ', ' in the same room together'],
     //['', '', ''],
 ];
 text3 = [
