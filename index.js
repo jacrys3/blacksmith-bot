@@ -13,7 +13,7 @@ client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
-for(const file of commandFiles){
+for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
 
     client.commands.set(command.name, command);
@@ -23,39 +23,48 @@ client.once('ready', () => {
     console.log('Bot is online!');
 });
 
-client.on('message', message =>{
-    if(message.content.toLowerCase() == 'ratio' && message.author.id == '475468852789248010') {
+client.on('message', message => {
+    client.user.setActivity('Overwatch® Origins Edition', { type: 'PLAYING' });
+    if (message.content.toLowerCase() == 'ratio' && message.author.id == '475468852789248010') {
         message.react('👍');
         return;
     }
-    if(!message.content.startsWith(prefix) || message.author.bot || message.channelId != '987093051921006692') return;
+    if (!message.content.startsWith(prefix) || message.author.bot || message.channelId != '987093051921006692') return;
 
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
-    
-    if(command === 'twitch' && seeCommand){
+
+    if (command === 'twitch' && seeCommand) {
         seeCommand = false;
         client.commands.get('twitch').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command == 'youtube' && seeCommand){
+    } else if (command == 'youtube' && seeCommand) {
         seeCommand = false;
         client.commands.get('youtube').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command == 'bingus' && seeCommand){
+    } else if (command == 'bingus' && seeCommand) {
         seeCommand = false;
         client.commands.get('bingus').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command == 'help' && seeCommand){
+    } else if (command == 'help' && seeCommand) {
         seeCommand = false;
         client.commands.get('help').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command.substring(0,6) == 'stupid' && seeCommand){
+    } else if (command.substring(0, 6) == 'stupid' && seeCommand) {
         seeCommand = false;
         client.commands.get('stupidbot').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if(command == 'real' && seeCommand){
+    } else if (command == 'real' && seeCommand) {
         seeCommand = false;
         client.commands.get('real').execute(message, args);
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if (command == 'prompts' && seeCommand) {
+        seeCommand = false;
+        client.commands.get('prompts').execute(message, args);
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if (command == 'people' && seeCommand) {
+        seeCommand = false;
+        client.commands.get('people').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
     } else if (seeCommand) {
         seeCommand = false;
