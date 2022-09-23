@@ -10,7 +10,6 @@ people = [
     'ablazed',
     'beach',
     'negative',
-    'kilowatt',
     'rose',
     'laura',
     'lux',
@@ -19,6 +18,7 @@ people = [
     'eon',
     'suzie',
     'onionftw',
+    'mad gorilla 237'
 ];
 text1 = [
     ['', ' hits those on LAN'],
@@ -74,6 +74,11 @@ text1 = [
     ['', 'SZN'],
     ['', ' should be in owl'],
     ['', ' is smelly and should take a shower now!'],
+    ['', ' is on DPS 😟'],
+    ['bring back ', ''],
+    ['', ' should be an all-star this tourney'],
+    ['', ' :D'],
+    ['', ' D:'],
     //['', ''],
     //['', ''],
     //['', ''],
@@ -86,6 +91,9 @@ text2 = [
     ['', ' and ', ' need to get married already'],
     ['', ' just got ', ' with the chicken butt joke'],
     ["look, all i'm saying is that i've never seen ", ' and ', ' in the same room together'],
+    ['', ' just got hammer killed by ', ''],
+    ['', ' just slapped ', ' in the face'],
+    ['', ' just had intercourse with ', "'s mom"],
     //['', '', ''],
 ];
 text3 = [

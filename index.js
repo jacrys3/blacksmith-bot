@@ -29,7 +29,7 @@ client.on('message', message => {
         message.react('👍');
         return;
     }
-    if (!message.content.startsWith(prefix) || message.author.bot || message.channelId != '987093051921006692') return;
+    if (!message.content.startsWith(prefix) || message.author.bot) return; //|| message.channelId != '987093051921006692'
 
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
@@ -58,9 +58,9 @@ client.on('message', message => {
         seeCommand = false;
         client.commands.get('real').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
-    } else if (command == 'prompts' && seeCommand) {
+    } else if (command.substring(0, 6) == 'prompt' && seeCommand) {
         seeCommand = false;
-        client.commands.get('prompts').execute(message, args);
+        client.commands.get('prompt').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
     } else if (command == 'people' && seeCommand) {
         seeCommand = false;
