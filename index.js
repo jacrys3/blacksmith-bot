@@ -24,12 +24,16 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    client.user.setActivity('Overwatch® Origins Edition', { type: 'PLAYING' });
+    client.user.setActivity('Overwatch® 2', { type: 'PLAYING' });
     if (message.content.toLowerCase() == 'ratio' && message.author.id == '475468852789248010') {
         message.react('👍');
         return;
     }
-    if (!message.content.startsWith(prefix) || message.author.bot) return; //|| message.channelId != '987093051921006692'
+    if (message.content.toLowerCase() == 'real' && message.author.id == '649748806841139210') {
+        message.channel.send("not real");
+        return;
+    }
+    if (!message.content.startsWith(prefix) || message.author.bot || message.channelId != '987093051921006692') return;
 
     const args = message.content.slice(prefix.length).split(/ + /);
     const command = args.shift().toLowerCase();
@@ -65,6 +69,10 @@ client.on('message', message => {
     } else if (command == 'people' && seeCommand) {
         seeCommand = false;
         client.commands.get('people').execute(message, args);
+        setTimeout(() => { seeCommand = true }, 2500);
+    } else if (command == 'teams' && seeCommand) {
+        seeCommand = false;
+        client.commands.get('teams').execute(message, args);
         setTimeout(() => { seeCommand = true }, 2500);
     } else if (seeCommand) {
         seeCommand = false;

@@ -15,15 +15,14 @@ people = [
     'lux',
     'monke',
     'vapo',
-    'eon',
     'suzie',
-    'onionftw',
-    'mad gorilla 237'
+    'mad gorilla 237',
+    'kanzashi'
 ];
 text1 = [
     ['', ' hits those on LAN'],
     ['am i the only one who thinks ', ' is hot?'],
-    ['the things i would do for ', ' to be in a H2O Blast uniform...'],
+    ['the things i would do for ', ' to be in a Catboy Crusaders uniform...'],
     ['', ' is my goat 🐐🐐🐐'],
     ['rare ', ' L'],
     ['common ', ' W'],
@@ -35,7 +34,7 @@ text1 = [
     ['we need to start appreciating the things ', ' does'],
     ['for personal reasons, i will be fighting ', ' with my bare fists'],
     ['yall are sleeping on ', '. just you wait'],
-    ['', ' wants to play for H2O Blast. they even had bedsheets with their logo on it as a child'],
+    ['', ' wants to play for Catboy Crusaders. they even had bedsheets with their logo on it as a child'],
     ["you just can't hate ", ". you simply can't"],
     ['', ' just deadlifted against you. fold the franchise'],
     ['', ', future role star'],
@@ -97,7 +96,7 @@ text2 = [
     //['', '', ''],
 ];
 text3 = [
-    ['watching ', ' has made me reconsider being a Blacksmith Trials fan'],
+    ['watching ', ' has made me reconsider being a Shadow Realm fan'],
     ['when i become owner, i will remove ', ' from the league'],
     ['', ' fans, mental health check?'],
     ['', ' will win grand finals'],
@@ -105,9 +104,13 @@ text3 = [
     //['', ''],
 ];
 teams = [
-    'H2O Blast',
-    'Name Lost',
-    'San Fransisco Cock',
+    'Los Muertos',
+    'Queso Fan Club',
+    'Shenanigoons',
+    'Name Reborn',
+    'Catboy Crusaders',
+    'Belosrea Ballers',
+    'San Francisco Cock',
 ];
 
 customName = '';
